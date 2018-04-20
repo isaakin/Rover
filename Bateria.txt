@@ -6,7 +6,7 @@ public class Bateria{
 
   public Bateria(){
   super();
-  } 
+  
   cargaMaxima = 100;
   cargaAtual = cargaMax;
     
