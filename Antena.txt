@@ -7,11 +7,18 @@ public class Antena{
   public Antena(){
 	super();
   }
-  
+  public Antena(String nome, boolean envio, int sinal, int desgaste){
   this.nome = nome;
+  this.envio = envio;
+  this.sinal = sinal;
+  this.desgaste = desgaste;
+}
+  public Antena(String nome, int sinal, int desgaste){
+        this.nome = nome;
 	this.sinal = sinal;
 	this.desgaste = 0;
 	}
+	
 	public void desgastarAntena(int desgaste){
 		this.desgaste = this.desgaste + desgaste;
 	}
