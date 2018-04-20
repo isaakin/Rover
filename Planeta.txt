@@ -68,4 +68,22 @@ public void setQuantidadeSubstancia(int quantidadeSubstancia){
 public void criarSubstanciaQuimica(){
  substancia = new substanciaQuimica[quantidadeSubstancia];
 }
+public Setor buscarSubstanciaQuimica(int posicaoSubstancia){
 
+		if(posicaoSubstancia>0 && posicaoSubstancia<=quantidadeSubstancia)
+			return substancia[posicaoSubstancia-1];
+		return null;
+
+	}
+
+	public int quantidadeSubstanciaQuimica(){
+		int cont = 0;
+		for(int i = 0;i<quantidadeSubstancia;++i){
+
+			cont+=substancia[i].quantidadeSubstancia();
+
+		}
+		return cont;
+
+	}
+}
