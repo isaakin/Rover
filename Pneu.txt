@@ -2,6 +2,12 @@ public class Pneu{
 	private float calibragem;
 	private String nome;
 	private int desgaste;
+        private pneu [] pneu;
+
+        publuc Pneu(){
+        super();
+        }
+        public Pneu(float calibragem, String nome, int desgaste){
 
 		this.nome = nome;
 		this.calibragem = calibragem;
