@@ -1,9 +1,12 @@
 public class Antena{
-  String nome;
-  boolean envio;
-  int sinal;
-  int desgaste;
+  private String nome;
+  private boolean envio;
+  private int sinal;
+  private int desgaste;
   
+  public Antena(){
+	super();
+  }
   
   this.nome = nome;
 	this.sinal = sinal;
