@@ -1,2 +1,30 @@
 public class Antena{
+  String nome;
+  boolean envio;
+  int sinal;
+  int desgaste;
+  
+  
+  this.nome = nome;
+	this.sinal = sinal;
+	this.desgaste = 0;
+	}
+	public void desgastarAntena(int desgaste){
+		this.desgaste = this.desgaste + desgaste;
+	}
+  public boolean testesinal(){
+    if(sinal<30){
+      return false;
+    }else{
+      return true;
+    }
+  }
+  public void setsinal(int sinal){
+    if(sinal >= 0 && sinal<=100){
+    this.sinal = sinal;
+  }
+  public int getsinal(){
+    return this.sinal;
+  }
+  
 }
