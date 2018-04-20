@@ -1,6 +1,6 @@
 public class Planeta{
 private String nome;
-private coodenada[][] = new Coodenada[20][20];
+private Object[][][] mapa = new Object[20][20][5];
 
 public Planeta(){
 super();
@@ -15,8 +15,39 @@ public void setNome(String nome){
  if(nome!=null){
   this.nome = nome;
 }
-public Rover getRover(int coordenadaX, int coordenadaY){
- return Rover;
+public Object getMapaElemento(Coordenada c){
+ Object o = null;
+ if(isCoordenadaValida(c)){
+  for(int i = 0; i<5; i++){
+   if(mapa[c.x][c.y][i]!= null){
+     o = mapa[c.x][c.y][i];
+      break;
+   }
+  }
+ }
+ return o;
+
 }
-public void setRover(){}
+public Objetc[] getMapaElementos(Coordenada c){
+  Object[] o = null;
+  if(isCoordenadaValida(c)){
+     o = mapa[c.x][c.y];
+  } 
+ return o;
+
+}
+
+
+
+
+public void set(){}
+}
+
+private boolean isCoordenadaValida(Coordenada c){
+ boolean valida = false;
+ if((c.x>=0) && (c.x<20) && (c.y>=0) &&
+    (c.y<20) && (c.y<20) ){
+     valida = true;
+    }
+ return valida;
 }
