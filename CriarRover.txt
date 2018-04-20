@@ -1,1 +1,29 @@
-# Rover
+import java.util.Scanner;
+public class TelaPrincipal{
+public void menu(){
+int opcao;
+     do{
+           System.out.println("Menu principal");
+           System.out.println("========================");
+           System.out.println("[1]- Criar Rover");
+           System.out.println("[2]- Localizar Rover");
+           System.out.println("[3]- Movimentar Rover");
+           System.out.println("[4]- Sair");
+           System.out.println("========================="); 
+           Scanner sc = new Scaner(System.in);
+    do{
+           System.out.print("Digite uma opcao:");
+           Scanner sc = new Scaner(System.in);
+           opcao = sc.netxInt();
+      } while(opcao < 0 || opcao > 4);
+      switch(opcao){
+      case 1: break;
+      case 2: break;
+      case 3: break;
+      case 4: break;
+      case 0: break;
+      default : System.out.println("opcao Invalida");
+
+      }    
+
+}
