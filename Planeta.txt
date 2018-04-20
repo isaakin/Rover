@@ -1,6 +1,6 @@
 public class Planeta{
 private String nome;
-private Rover[][] = new Rover[20][20];
+private coodenada[][] = new Coodenada[20][20];
 
 public Planeta(){
 super();
