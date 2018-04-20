@@ -3,7 +3,8 @@ public class Rover{
   private int carga;
   private Coordenada coordenada = new Coordenada();
   private Bateria bateria = new bateria();
-  
+  private int frente;
+
   public Rover(){
   super();
   }
@@ -30,6 +31,24 @@ public class Rover{
     this.carga = carga;
     }
   }
+
+  public int getFrente(){
+     return frente;
+  }
+
+  public void setFrente(int frente){
+     if(f == 1){
+      this.frente = frente;//cima            
+     }else if(f == 2){
+      this.frente = frente;// direita
+     }else if(f == 3){
+      this.frente = frente;// baixo
+     }else if(f == 4){
+      this.frente = frente;// esquerda
+     }else{
+      this.frente = null;
+     }
+  }
   public Coordenada getCoordenada(){
   return coordenada;
   }
@@ -47,5 +66,43 @@ public class Rover{
   if(bateria>=0){
   this.bateria = bateria;
 }
+public void andar(int op){
+  
+  if(getFrente() == 1){
+     if(op == 1){
+       int a = coordenada.setCoordenadaX() + 1;
+       coordenada.setCoordenadaX(a);
+     }else if (op == 2){
+       int b = coordenada.setCoordenadaY() + 1;
+       coordenada.setCoordenadaY(b);
+     }    
+  }else if(getFrente() == 2){
+     if(op == 1){
+       int c = coordenada.setCoordenadaX() + 1;
+       coordenada.setCoordenadaX(c);
+     }else if (op == 2){
+       int d = coordenada.setCoordenadaY() - 1;
+       coordenada.setCoordenadaY(d);
+     }    
+  }else if(getFrente() == 3){
+     if(op == 1){
+       int e = coordenada.setCoordenadaX() - 1;
+       coordenada.setCoordenadaX(e);
+     }else if (op == 2){
+       int f = coordenada.setCoordenadaY() - 1;
+       coordenada.setCoordenadaY(f);
+     }    
+  }else if(getFrente() == 4){
+     if(op == 1){
+       int g = coordenada.setCoordenadaX() - 1;
+       coordenada.setCoordenadaX(g);
+     }else if (op == 2){
+       int h = coordenada.setCoordenadaY() + 1;
+       coordenada.setCoordenadaY(h);
+     }    
+  }
 
-
+}
+public void girar(Coordenada c){
+if(getCoordenada)
+}
