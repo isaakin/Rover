@@ -1,22 +1,50 @@
-# Compiled class file
-*.class
+public class Rover{
+  private String nome;
+  private int carga;
+  private Coordenada coordenada = new Coordenada();
+  private Bateria bateria = new bateria();
+  
+  public Rover(){
+  super();
+  }
 
-# Log file
-*.log
+  public Rover(String nome, int carga, Coordenada coordenada, Bateia bateia){
+  this.nome = nome;
+  this.carga = carga;
+  this.coordenada = coordenada;
+  this.bateria = bateria;
+  }
+  public String getNome(){
+  return nome;
+  }
+  public void setNome(String nome){
+    if(nome!=null){
+    this.nome = nome;
+    }
+  }
+  public int getCarga(){
+  return carga;
+  }
+  public void setCarga(int carga){
+    if(carga>=0){
+    this.carga = carga;
+    }
+  }
+  public Coordenada getCoordenada(){
+  return coordenada;
+  }
+  public void setCoordenada(Coordenada coordenada){
+    if(coordenada!= null){
+       if(coordenada.x >=0 && coordenada.y>=0)
+      this.coordenada = coordenada;
+       }
+    }
+ }
+ public Bateria getBateria(){
+  return bateria;
+ }
+ public void setBateria(Bateria bateria){
+  if(bateria>=0){
+  this.bateria = bateria;
+}
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
