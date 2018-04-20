@@ -1,0 +1,7 @@
+public class MainRover{
+
+ public static void main(String[] args){
+ TelaPrincipal t = new TelaPrincipal();
+ t.menu();
+ }
+}
