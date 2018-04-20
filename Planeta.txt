@@ -1,6 +1,8 @@
 public class Planeta{
 private String nome;
 private Object[][][] mapa = new Object[20][20][5];
+privte SubstanciaQuimica substancia[]; 
+private int quantidadeSubstancia = 1;
 
 public Planeta(){
 super();
@@ -40,6 +42,7 @@ public Objetc[] getMapaElementos(Coordenada c){
 
 
 
+
 public void set(){}
 }
 
@@ -51,3 +54,18 @@ private boolean isCoordenadaValida(Coordenada c){
     }
  return valida;
 }
+public void setQuantidadeSubstancia(int quantidadeSubstancia){
+		if(quantidadeSubstancia > 0){
+			this.quantidadeSubstancia = quantidadeSubstancia;
+		}
+		criarSubstanciaQuimica();
+	}
+
+	public int getQuantidadeSubstancias(){
+		return quantidadeSubstancia;
+	}
+
+public void criarSubstanciaQuimica(){
+ substancia = new substanciaQuimica[quantidadeSubstancia];
+}
+
