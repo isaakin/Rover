@@ -1,0 +1,62 @@
+public class Bateria{
+ private String nome;
+ private int cargaAtual;
+ private int cargaMaxima;
+ private int modoEconomia;
+
+  public Bateria(){
+  super();
+  } 
+  cargaMaxima = 100;
+  cargaAtual = cargaMax;
+    
+  } 
+ 
+  public Bateria(String nome, int cargaAtual, int cargaMaxima, int modoEconomia){
+  this.nome = nome;
+  this.cargaAtual = cargaAtual;
+  this.cargaMaxima =cargaMaxima;
+  this.modoEconomia = modoEconomia;
+    
+  } 
+  public Bateria(){
+  cargaMaxima = 100;
+  cargaAtual = cargaMax;
+  }
+ 
+  public Bateria(String nome,int cargaMax){
+  this(nome);
+  this.cargaMax = cargaMax;
+  this.cargaAtual = cargaMax;
+  }
+  
+  public String getNome(){
+   return nome;
+  } 
+  public void setNome(String nome){
+  if(nome.lengt()>=4){
+  this.nome = nome;
+  
+  }
+  public int getCargaAtual(){
+  return cargaAtual;
+  }
+  public void setCargaAtual(int cargaAtual){
+  if(cargaAtual>=0){
+  this.cargaAtual = cargaAtual;
+  }
+  public int getCargaMaxima(){
+  return cargaMaxima;
+  }
+  public void setCargaMaxima(int cargaMaxima){
+  if(cargaMaxima<=100){
+  this.cargaMaxima = cargaMaxima;
+  }
+  public int getModoEconomia(){
+  return modoEconomia;
+  }
+  public void setModoEcomia(int modoEconomia){
+  this.modoEcomia = modoEcomia;
+  }
+ public void gastarEnergia(){}
+}

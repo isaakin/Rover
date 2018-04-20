@@ -1,0 +1,26 @@
+public class substanciaQuimica{
+private String substancia;
+private int cargaSubstancia;
+
+public substanciaQuimica(){
+super();
+}
+public substanciaQuimica(String substancia, int cargaSubstancia){
+this.substancia = substancia;
+this.cargaSubstancia = cargaSubstancia;
+}
+public String getSubstancia(){
+return substancia;
+}
+public void setSubstancia(String substancia){
+this.substancia = substancia;
+}
+public int getCargaSubstancia(){
+return cargaSubstancia;
+}
+public void setCargaSubstancia(int cargaSubstancia){
+this.cargaSubstancia = cargaSubstancia;
+}
+public void qualSubstancia(){}
+
+}

@@ -1,0 +1,27 @@
+public class bracoMecanico{
+private int parafuso;
+private int metalico;
+
+public bracoMetalico(){
+super();
+}
+public bracoMetaligo(int parafuso, int metaligo){
+this.parafuso = parafuso;
+this.metalico = metalico;
+}
+public int getParafuso(){
+return parafuso;
+}
+public void setParafuso(int parafuso){
+this.parafuso = parafuso;
+}
+public int getMetalico(){
+return metalico;
+}
+public void setMetalico(int metalico){
+this.metalico = metalico;
+}
+public void pegar(){}
+public void largar(){}
+
+}

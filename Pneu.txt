@@ -1,0 +1,16 @@
+public class Pneu{
+	private float calibragem;
+	private String nome;
+	private int desgaste;
+
+		this.nome = nome;
+		this.calibragem = calibragem;
+		this.desgaste = 0;
+	}
+	public void desgastarPneu(int desgaste){
+		this.desgaste = this.desgaste + desgaste;
+	}
+	public int getDesgaste(){
+		return desgaste;	
+	}
+}
