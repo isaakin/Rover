@@ -1,2 +1,22 @@
+import java.util.Scanner;
+
 public class ModuloComunicacao{
+  private String mensagem;
+  Antena antena;
+  
+  public ModuloComunicação{
+    super()
+    }
+  
+  public String mensagem(){
+    Scanner mensagem = new Scanner(System.in);
+        String mensagem;
+        
+        System.out.println("envie sua mensagem para a central de comando:\n");
+        mensagem = .nextInt();
+        
+        System.out.printf("Sua mensagem " + mensagem + " foi enviada com sucesso\n");
+        
+
+  }
 }
