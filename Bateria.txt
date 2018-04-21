@@ -49,9 +49,11 @@ public class Bateria{
   return cargaMaxima;
   }
   public void setCargaMaxima(int cargaMaxima){
-  if(cargaMaxima<=100){
-  this.cargaMaxima = cargaMaxima;
-  }
+    if(cargaMaxima<=100){
+    this.cargaMaxima = cargaMaxima;
+    }
+    }
+  
   public int getModoEconomia(){
   return modoEconomia;
   }
