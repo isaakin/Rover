@@ -4,6 +4,8 @@ public class Rover{
   private Coordenada coordenada = new Coordenada();
   private Bateria bateria = new bateria();
   private int frente;
+  private Antena antena;
+  
 
   public Rover(){
   super();
@@ -58,7 +60,13 @@ public class Rover{
       this.coordenada = coordenada;
        }
     }
- }
+  public Antena getAntena() {
+        return antena;
+    }
+
+    public void setAntena(Antena antena) {
+        this.antena = antena;
+    }
  public Bateria getBateria(){
   return bateria;
  }
@@ -66,37 +74,37 @@ public class Rover{
   if(bateria>=0){
   this.bateria = bateria;
 }
-public void andar(int op){
+public void andar(int brad){
   
   if(getFrente() == 1){
-     if(op == 1){
+     if(brad == 1){
        int a = coordenada.setCoordenadaX() + 1;
        coordenada.setCoordenadaX(a);
-     }else if (op == 2){
+     }else if (brad == 2){
        int b = coordenada.setCoordenadaY() + 1;
        coordenada.setCoordenadaY(b);
      }    
   }else if(getFrente() == 2){
-     if(op == 1){
+     if(brad == 1){
        int c = coordenada.setCoordenadaX() + 1;
        coordenada.setCoordenadaX(c);
-     }else if (op == 2){
+     }else if (brad == 2){
        int d = coordenada.setCoordenadaY() - 1;
        coordenada.setCoordenadaY(d);
      }    
   }else if(getFrente() == 3){
-     if(op == 1){
+     if(brad == 1){
        int e = coordenada.setCoordenadaX() - 1;
        coordenada.setCoordenadaX(e);
-     }else if (op == 2){
+     }else if (brad == 2){
        int f = coordenada.setCoordenadaY() - 1;
        coordenada.setCoordenadaY(f);
      }    
   }else if(getFrente() == 4){
-     if(op == 1){
+     if(brad == 1){
        int g = coordenada.setCoordenadaX() - 1 
        coordenada.setCoordenadaX(g);
-     }else if (op == 2){
+     }else if (brad == 2){
        int h = coordenada.setCoordenadaY() + 1;
        coordenada.setCoordenadaY(h);
      }    
@@ -130,4 +138,20 @@ public void girar(Coordenada c public void girar(char e){
       setFrente(3);
     }
   } 
+}
+ public void gastarEnergia(int energiaGasta)
+    {
+        int energiaAtual = getBateria().getCargaAtual();
+        getBateria().setCargaAtual(cargaAtual - energiaGasta);
+    }
+    
+    public String receberMensagem()
+    {
+        return getAntena().receberMensagem();
+    }
+    public void enviarMensagem(String mensagem)
+    {
+        getAntena().enviarMensagem(mensagem);
+    }
+  }
 }
