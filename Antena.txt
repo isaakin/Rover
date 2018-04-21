@@ -1,4 +1,4 @@
-public class Antena{
+public class Antena{public class Antena{
   private String nome;
   private boolean envio;
   private int sinal;
@@ -6,6 +6,47 @@ public class Antena{
   
   public Antena(){
 	super();
+  }
+  public Antena(String nome, boolean envio, int sinal, int desgaste){
+  this.nome = nome;
+  this.envio = envio;
+  this.sinal = sinal;
+  this.desgaste = desgaste;
+}
+  public Antena(String nome, int sinal, int desgaste){
+    this.nome = nome;
+	this.sinal = sinal;
+	this.desgaste = 0;
+	}
+	
+	public void desgastarAntena(int desgaste){
+     this.desgaste = this.desgaste + desgaste;
+	}
+     public boolean testeSinal(){
+    if(sinal<30){
+      return false;
+    }else{
+      return true;
+    }
+  }
+  public void setSinal(int sinal){
+    if(sinal >= 0 && sinal<=100){
+    this.sinal = sinal;
+  }
+  public int getSinal(){
+    return this.sinal;
+  }
+   public String receberMensagem()
+    {
+        return "";
+    }
+    public void enviarMensagem(String mensagem)
+    {
+        
+    }
+  
+}
+
   }
   public Antena(String nome, boolean envio, int sinal, int desgaste){
   this.nome = nome;
