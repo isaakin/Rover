@@ -1,27 +1,85 @@
-public class Coordenada{
-  private int coordenadaX;
-  private int coordenadaY;
-  public Coordenada(){
-  super();
-  }
-  public Coordenada(int coordenadaX, int coordenadaY){
-  this.coordenadaX = coordenadaX;
-  this.coordenadaY = coordenadaY;
-  }
-  public int getCoordenadaX(){
-  return coordenadaX;
-  }
-  public void setCoordenadaX(int coordenadaX){
-   if(coordenadaX>=0){
-   this.coordenadaX = coordenadaX;
+public class Planeta{
+private String nome;
+private Object[][][] mapa = new Object[20][20][5];
+private SubstanciaQuimica substancia[]; 
+private int quantidadeSubstancia = 1;
+
+public Planeta(){
+super();
+}
+public Planeta(String Nome){
+this.nome = nome;
+}
+public String getNome(){
+return nome;
+}
+public void setNome(String nome){
+ if(nome!=null){
+  this.nome = nome;
+}
+public Object getMapaElemento(Coordenada c){
+ Object o = null;
+ if(isCoordenadaValida(c)){
+  for(int i = 0; i<5; i++){
+   if(mapa[c.x][c.y][i]!= null){
+     o = mapa[c.x][c.y][i];
+      break;
    }
   }
- public int getCoordenadaY(){
-  return coordenadaY;
-  }
-  public void setCoordenadaY(int coordenadaY){
-   if(coordenadaY>=0){
-   this.coordenadaY = coordenadaY;
-   }
-  }
+ }
+ return o;
+
+}
+public Objetc[] getMapaElementos(Coordenada c){
+  Object[] o = null;
+  if(isCoordenadaValida(c)){
+     o = mapa[c.x][c.y];
+  } 
+ return o;
+
+}
+
+public void set(){}
+}
+
+private boolean isCoordenadaValida(Coordenada c){
+ boolean valida = false;
+ if((c.x>=0) && (c.x<20) && (c.y>=0) &&
+    (c.y<20) && (c.y<20) ){
+     valida = true;
+    }
+ return valida;
+}
+public void setQuantidadeSubstancia(int quantidadeSubstancia){
+		if(quantidadeSubstancia > 0){
+			this.quantidadeSubstancia = quantidadeSubstancia;
+		}
+		criarSubstanciaQuimica();
+	}
+
+	public int getQuantidadeSubstancias(){
+		return quantidadeSubstancia;
+	}
+
+public void criarSubstanciaQuimica(){
+ substancia = new substanciaQuimica[quantidadeSubstancia];
+}
+public Setor buscarSubstanciaQuimica(int posicaoSubstancia){
+
+		if(posicaoSubstancia>0 && posicaoSubstancia<=quantidadeSubstancia)
+			return substancia[posicaoSubstancia-1];
+		return null;
+
+	}
+
+	public int quantidadeSubstanciaQuimica(){
+		int cont = 0;
+		for(int i = 0;i<quantidadeSubstancia;++i){
+
+			cont+=substancia[i].quantidadeSubstancia();
+
+		}
+		return cont;
+
+	}
 }
