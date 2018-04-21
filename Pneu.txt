@@ -1,22 +1,157 @@
-public class Pneu{
-	private float calibragem;
-	private String nome;
-	private int desgaste;
-        private pneu [] pneu;
+public class Rover{
+  private String nome;
+  private int carga;
+  private Coordenada coordenada = new Coordenada();
+  private Bateria bateria = new bateria();
+  private int frente;
+  private Antena antena;
+  
 
-        publuc Pneu(){
-        super();
-        }
-        public Pneu(float calibragem, String nome, int desgaste){
+  public Rover(){
+  super();
+  }
 
-		this.nome = nome;
-		this.calibragem = calibragem;
-		this.desgaste = 0;
-	}
-	public void desgastarPneu(int desgaste){
-		this.desgaste = this.desgaste + desgaste;
-	}
-	public int getDesgaste(){
-		return desgaste;	
-	}
+  public Rover(String nome, int carga, Coordenada coordenada, Bateia bateia){
+  this.nome = nome;
+  this.carga = carga;
+  this.coordenada = coordenada;
+  this.bateria = bateria;
+  }
+  public String getNome(){
+  return nome;
+  }
+  public void setNome(String nome){
+    if(nome!=null){
+    this.nome = nome;
+    }
+  }
+  public int getCarga(){
+  return carga;
+  }
+  public void setCarga(int carga){
+    if(carga>=0){
+    this.carga = carga;
+    }
+  }
+
+  public int getFrente(){
+     return frente;
+  }
+
+  public void setFrente(int frente){
+     if(f == 1){
+      this.frente = frente;//cima            
+     }else if(f == 2){
+      this.frente = frente;// direita
+     }else if(f == 3){
+      this.frente = frente;// baixo
+     }else if(f == 4){
+      this.frente = frente;// esquerda
+     }else{
+      this.frente = null;
+     }
+  }
+  public Coordenada getCoordenada(){
+  return coordenada;
+  }
+  public void setCoordenada(Coordenada coordenada){
+    if(coordenada!= null){
+       if(coordenada.x >=0 && coordenada.y>=0)
+      this.coordenada = coordenada;
+       }
+    }
+  public Antena getAntena() {
+        return antena;
+    }
+
+    public void setAntena(Antena antena) {
+        this.antena = antena;
+    }
+ public Bateria getBateria(){
+  return bateria;
+ }
+ public void setBateria(Bateria bateria){
+  if(bateria>=0){
+  this.bateria = bateria;
+}
+public void andar(int brad){
+  
+  if(getFrente() == 1){
+     if(brad == 1){
+       int a = coordenada.setCoordenadaX() + 1;
+       coordenada.setCoordenadaX(a);
+     }else if (brad == 2){
+       int b = coordenada.setCoordenadaY() + 1;
+       coordenada.setCoordenadaY(b);
+     }    
+  }else if(getFrente() == 2){
+     if(brad == 1){
+       int c = coordenada.setCoordenadaX() + 1;
+       coordenada.setCoordenadaX(c);
+     }else if (brad == 2){
+       int d = coordenada.setCoordenadaY() - 1;
+       coordenada.setCoordenadaY(d);
+     }    
+  }else if(getFrente() == 3){
+     if(brad == 1){
+       int e = coordenada.setCoordenadaX() - 1;
+       coordenada.setCoordenadaX(e);
+     }else if (brad == 2){
+       int f = coordenada.setCoordenadaY() - 1;
+       coordenada.setCoordenadaY(f);
+     }    
+  }else if(getFrente() == 4){
+     if(brad == 1){
+       int g = coordenada.setCoordenadaX() - 1 
+       coordenada.setCoordenadaX(g);
+     }else if (brad == 2){
+       int h = coordenada.setCoordenadaY() + 1;
+       coordenada.setCoordenadaY(h);
+     }    
+  }
+
+}
+public void girar(Coordenada c public void girar(char e){
+    
+  if(getFrente() == 1){
+    if(e == d){ 
+      setFrente(2);    
+    }else if(){
+      setFrente(4);
+    }
+  }else if(getFrente() == 2){
+    if(e == d){ 
+      setFrente(3);    
+    }else if(){
+      setFrente(1);
+    }
+  }else if(getFrente() == 3){
+    if(e == d){ 
+      setFrente(4);    
+    }else if(){
+      setFrente(2);
+    }
+  } else if(getFrente() == 4){
+    if(e == d){ 
+      setFrente(1);    
+    }else if(){
+      setFrente(3);
+    }
+  } 
+}
+ public void gastarEnergia(int energiaGasta)
+    {
+        int energiaAtual = getBateria().getCargaAtual();
+        getBateria().setCargaAtual(cargaAtual - energiaGasta);
+    }
+    
+    public String receberMensagem()
+    {
+        return getAntena().receberMensagem();
+    }
+    public void enviarMensagem(String mensagem)
+    {
+        getAntena().enviarMensagem(mensagem);
+    }
+  }
 }
