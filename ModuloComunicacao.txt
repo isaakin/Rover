@@ -1,22 +1,62 @@
-import java.util.Scanner;
+package rover;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class ModuloComunicacao{
-  private String mensagem;
-  Antena antena;
-  
-  public ModuloComunicação{
-    super()
-    }
-  
-  public String mensagem(){
-    Scanner mensagem = new Scanner(System.in);
-        String mensagem;
-        
-        System.out.println("envie sua mensagem para a central de comando:\n");
-        mensagem = .nextString();
-        
-        System.out.printf("Sua mensagem " + mensagem + " foi enviada com sucesso\n");
-        
+	private Antena antenas[];
+	private boolean estadoModuloComunicacao;
+	private LocalDate data;
+	private LocalTime hora;
+	
+	public ModuloComunicacao(){
+		super();
+	}
+	
+	public ModuloComunicacao(boolean estadoModuloComunicacao, ){
+		this.estadoModuloComunicacao = estadoModuloComunicacao;
+		private LocalDate data;
+	private LocalTime hora;
+	
+	
+	public void enviarMensagens(){
+		System.out.println("Envie mensagem: " +getData() + getHora());
+		
+		
+	}
+	public void enviarImagens(){
+		System.out.println("Envie imagens: " +getData() + getHora());
+		
+	}
+	public void gastarEnergia(){
+		
+	}
 
-  }
+
+	public LocalDate getData() {
+		return data;
+	}
+
+
+	public void setData(LocalDate data) {
+		this.data = data;
+	}
+
+
+	public LocalTime getHora() {
+		return hora;
+	}
+
+
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
+	}
+	public boolean EstadoModuloComunicacao(){
+		return estadoModuloComunicacao;
+	}
+	public void setEstadoModuloComunicacao(boolean estadoModuloComunicacao){
+    this.estadoModuloComunicacao = estadoModuloComunicacao;
+    }	
+	
 }
