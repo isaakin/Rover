@@ -13,7 +13,7 @@ public class ModuloComunicacao{
         String mensagem;
         
         System.out.println("envie sua mensagem para a central de comando:\n");
-        mensagem = .nextInt();
+        mensagem = .nextString();
         
         System.out.printf("Sua mensagem " + mensagem + " foi enviada com sucesso\n");
         
