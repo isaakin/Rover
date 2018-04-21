@@ -1,2 +1,37 @@
-public class ModuloAnalises{
+package rover;
+
+public class ModuloAnalises {
+	private String colhedorDeAmostras;
+	private Object telescopio;
+	private int analisarSubstancia;
+	private String qualSubstancia;
+	
+	
+	public void realizarAnalises(){
+		System.out.println("Qual resultado obtemos da analise: "+ getColhedorDeAmostras());
+			
+		}
+	public void checarRevestimentoDeRochas(){
+		System.out.println("Qual checagem obtemos: "+getTelescopio());
+	}
+
+
+	public String getColhedorDeAmostras() {
+		return colhedorDeAmostras;
+	}
+
+
+	public void setColhedorDeAmostras(String colhedorDeAmostras) {
+		this.colhedorDeAmostras = colhedorDeAmostras;
+	}
+	public Object getTelescopio() {
+		return telescopio;
+	}
+	public void setTelescopio(Object telescopio) {
+		this.telescopio = telescopio;
+	}
+	public int getAnalisarSubstancia(){
+    return analisarSubstancia;
+    public void setAnalisarSubstancia(int analisarSubstancia){
+    this.analisarSubstancia = analisarSubstancia;		
 }
